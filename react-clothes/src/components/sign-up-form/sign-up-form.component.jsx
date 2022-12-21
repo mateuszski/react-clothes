@@ -32,9 +32,7 @@ const SignUpForm = () => {
 
       await createUserDocumentFromAuth(user, { displayName });
       resetFormFields();
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   const handleChange = (event) => {

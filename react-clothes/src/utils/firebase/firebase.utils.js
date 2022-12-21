@@ -57,7 +57,6 @@ export const addColletcionAndDocuments = async (
   });
 
   await batch.commit();
-  console.log("done");
 };
 
 export const getCategoriesAndDocuments = async () => {
@@ -94,9 +93,7 @@ export const createUserDocumentFromAuth = async (
         createdAt,
         ...additionalInformation,
       });
-    } catch (error) {
-      console.log("error creating the user", error.message);
-    }
+    } catch (error) {}
   }
 
   return userDocRef;

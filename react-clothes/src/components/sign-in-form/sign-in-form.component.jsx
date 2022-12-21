@@ -29,7 +29,7 @@ const SignInForm = () => {
     event.preventDefault();
 
     try {
-      const user = await signInAuthWithEmailAndPassword(email, password);
+      await signInAuthWithEmailAndPassword(email, password);
 
       resetFormFields();
     } catch (error) {
@@ -41,7 +41,6 @@ const SignInForm = () => {
           alert("no user associated with this email");
           break;
         default:
-          console.log(error);
       }
     }
   };
